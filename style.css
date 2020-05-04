@@ -8,6 +8,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  overflow: hidden;
+}
+
 .calculator {
   height: 100vh;
   background-color: rgba(39, 39, 39, 0.95);
@@ -15,6 +19,17 @@ html {
 
 .score-table {
   height: 30vh;
+  display: flex;
+}
+
+.score {
+  width: 100vw;
+  height: 30%;
+  align-self: center;
+  text-align: center;
+  color: #fff;
+  font-size: 3.1rem;
+  letter-spacing: 1px;
 }
 
 .history-icon {
@@ -22,6 +37,7 @@ html {
   top: 15px;
   right: 15px;
   width: 30px;
+  cursor: pointer;
 }
 
 .buttons {
@@ -44,6 +60,7 @@ html {
   background-color: rgba(41, 40, 40, 0.85);
   cursor: pointer;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .button__number {
@@ -61,4 +78,30 @@ html {
 
 .button__math-symbol:hover {
   background-color: rgb(51, 204, 102);
+}
+
+.history {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  height: 70vh;
+  width: 100vw;
+  transform: translateY(70vh);
+  background-color: rgb(41, 40, 40);
+}
+
+@keyframes history-activating {
+  from {
+    transform: translateY(70vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.--active {
+  transform: translateY(0);
+  animation: history-activating 0.3s ease-in;
+
 }
