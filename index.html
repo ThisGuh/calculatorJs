@@ -9,40 +9,41 @@
 </head>
 
 <body>
-    <div class="calculator">
-        <div class="score-table">
-            <img class="history-icon" src="history-solid.svg" alt="">
-            <div class="score">32434</div>
-        </div>
-        <div class="buttons">
-            <button class="button">%</button>
-            <button class="button">&#8730</button>
-            <button class="button">X<sup>2</sup></button>
-            <button class="button">1/x</button>
-            <button class="button">CE</button>
-            <button class="button">C</button>
-            <button class="button"><img class="backspace" src="backspace-solid.svg" alt=""></button>
-            <button class="button button__math-symbol">/</button>
-            <button class="button button__number">7</button>
-            <button class="button button__number">8</button>
-            <button class="button button__number">9</button>
-            <button class="button button__math-symbol">*</button>
-            <button class="button button__number">4</button>
-            <button class="button button__number">5</button>
-            <button class="button button__number">6</button>
-            <button class="button button__math-symbol">-</button>
-            <button class="button button__number">1</button>
-            <button class="button button__number">2</button>
-            <button class="button button__number">3</button>
-            <button class="button button__math-symbol">+</button>
-            <button class="button">&#177</button>
-            <button class="button button__number">0</button>
-            <button class="button">,</button>
-            <button class="button button__math-symbol">=</button>
-        </div>
-        <div class="history"></div>
+<div class="calculator">
+    <div class="score-table">
+        <img class="history-icon" src="history-solid.svg" alt="">
+        <div class="score"></div>
     </div>
-    <script src="Calculator.js"></script>
+    <div class="buttons">
+        <button class="button" data-value="percent">%</button>
+        <button class="button" data-value="square">&#8730</button>
+        <button class="button" data-value="power">X<sup>2</sup></button>
+        <button class="button" data-value="fraction">1/x</button>
+        <button class="button" data-value="cancel">CE</button>
+        <button class="button" data-value="clear">C</button>
+        <button class="button" data-value="back"><img class="backspace" src="backspace-solid.svg"
+                                                      alt=""></button>
+        <button class="button button__math-symbol" data-value="divide">/</button>
+        <button class="button button__number">7</button>
+        <button class="button button__number">8</button>
+        <button class="button button__number">9</button>
+        <button class="button button__math-symbol" data-value="multiply">*</button>
+        <button class="button button__number">4</button>
+        <button class="button button__number">5</button>
+        <button class="button button__number">6</button>
+        <button class="button button__math-symbol" data-value="substraction">-</button>
+        <button class="button button__number">1</button>
+        <button class="button button__number">2</button>
+        <button class="button button__number">3</button>
+        <button class="button button__math-symbol" data-value="addition">+</button>
+        <button class="button" data-value="invert">&#177</button>
+        <button class="button button__number">0</button>
+        <button class="button" data-value="comma">,</button>
+        <button class="button button__math-symbol" data-value="equal">=</button>
+    </div>
+    <div class="history"></div>
+</div>
+<script src="Calculator.js"></script>
 </body>
 
 </html>

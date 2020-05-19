@@ -1,107 +1,111 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 body {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .calculator {
-  height: 100vh;
-  background-color: rgba(39, 39, 39, 0.95);
+    height: 100vh;
+    background-color: rgba(39, 39, 39, 0.95);
 }
 
 .score-table {
-  height: 30vh;
-  display: flex;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+
 .score {
-  width: 100vw;
-  height: 30%;
-  align-self: center;
-  text-align: center;
-  color: #fff;
-  font-size: 3.1rem;
-  letter-spacing: 1px;
+    width: 100vw;
+    height: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: 3.1rem;
+    letter-spacing: 1px;
 }
 
 .history-icon {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 30px;
-  cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    cursor: pointer;
 }
 
 .buttons {
-  height: 70%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 2px;
-  padding: 2px;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 2px;
+    padding: 2px;
 }
 
 .backspace {
-  width: 40px;
+    width: 40px;
 }
 
 .button {
-  border: none;
-  font-size: 2.3rem;
-  color: #fff;
-  background-color: rgba(41, 40, 40, 0.85);
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
+    border: none;
+    font-size: 2.3rem;
+    color: #fff;
+    background-color: rgba(41, 40, 40, 0.85);
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .button__number {
-  font-weight: bold;
-  background-color: rgba(12, 12, 12, 0.8);
+    font-weight: bold;
+    background-color: rgba(12, 12, 12, 0.8);
 }
 
 .button:hover {
-  background-color: rgb(82, 78, 78);
+    background-color: rgb(82, 78, 78);
 }
 
 .button__math-symbol {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
 }
 
 .button__math-symbol:hover {
-  background-color: rgb(51, 204, 102);
+    background-color: rgb(51, 204, 102);
 }
 
 .history {
-  position: absolute;
-  top: 30vh;
-  left: 0;
-  height: 70vh;
-  width: 100vw;
-  transform: translateY(70vh);
-  background-color: rgb(41, 40, 40);
+    position: absolute;
+    top: 30vh;
+    left: 0;
+    height: 70vh;
+    width: 100vw;
+    transform: translateY(70vh);
+    background-color: rgb(41, 40, 40);
+    color: #fff;
+    font-size: 2rem;
 }
 
 @keyframes history-activating {
-  from {
-    transform: translateY(70vh);
-  }
+    from {
+        transform: translateY(70vh);
+    }
 
-  to {
-    transform: translateY(0);
-  }
+    to {
+        transform: translateY(0);
+    }
 }
 
-.--active {
-  transform: translateY(0);
-  animation: history-activating 0.3s ease-in;
+.history--active {
+    transform: translateY(0);
+    animation: history-activating 0.3s ease-in;
 
 }
